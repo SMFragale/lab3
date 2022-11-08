@@ -1,0 +1,24 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//Dependencias de proyecto
+	implementation 'org.mongodb:mongo-java-driver:3.12.11'
+
+	//Dependencias internas
+	implementation project(':domain')
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
