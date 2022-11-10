@@ -14,7 +14,7 @@ dependencies {
 
 	//Dependencias de proyecto
 	implementation 'org.mongodb:mongo-java-driver:3.12.11'
-
+	implementation 'org.springframework.data:spring-data-mongodb:3.4.5'
 	//Dependencias internas
 	implementation project(':domain')
 }
