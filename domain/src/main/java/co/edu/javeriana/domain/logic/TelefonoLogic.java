@@ -10,6 +10,6 @@ public interface TelefonoLogic {
     Boolean update(Telefono telefono, int persistence);
 
     List<Telefono> findAll(int persistence);
-    Telefono findById(Integer cc,int persistence);
-    Integer count(int persistence);
+    Telefono findByNum(String num, int persistence);
+    Long count(int persistence);
 }

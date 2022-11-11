@@ -10,6 +10,6 @@ public interface TelefonoPort {
     Boolean update(Telefono estutelefonodio);
 
     List<Telefono> findAll();
-    Telefono findById(Integer cc);
-    Integer count();
+    Telefono findByNum(String num);
+    Long count();
 }

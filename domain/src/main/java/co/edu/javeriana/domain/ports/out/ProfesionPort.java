@@ -11,6 +11,6 @@ public interface ProfesionPort {
 
     List<Profesion> findAll();
     Profesion findById(Integer id);
-    Integer count();
+    Long count();
 
 }

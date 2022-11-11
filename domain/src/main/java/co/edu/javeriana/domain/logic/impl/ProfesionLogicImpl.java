@@ -1,7 +1,6 @@
 package co.edu.javeriana.domain.logic.impl;
 
 import co.edu.javeriana.domain.logic.ProfesionLogic;
-import co.edu.javeriana.domain.model.Persona;
 import co.edu.javeriana.domain.model.Profesion;
 import co.edu.javeriana.domain.ports.out.maria.ProfesionPortMaria;
 import co.edu.javeriana.domain.ports.out.mongo.ProfesionPortMongo;
@@ -91,7 +90,7 @@ public class ProfesionLogicImpl implements ProfesionLogic {
     }
 
     @Override
-    public Integer count(int persistence) {
+    public Long count(int persistence) {
         if (persistence == 1){
             return profesionPortMaria.count();
         }

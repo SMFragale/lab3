@@ -1,8 +1,6 @@
 package co.edu.javeriana.mongo.mapper;
 
-import co.edu.javeriana.domain.model.Persona;
 import co.edu.javeriana.domain.model.Profesion;
-import co.edu.javeriana.mongo.document.PersonaDocument;
 import co.edu.javeriana.mongo.document.ProfesionDocument;
 import org.modelmapper.ModelMapper;
 

@@ -11,8 +11,8 @@ public class EstudioMapperImpl implements EstudioMapper{
         mapper = new ModelMapper();
         mapper.typeMap(EstudioDocument.class, Estudio.class).addMappings(mapping -> {
             mapping.map(EstudioDocument::getUniver, Estudio::setUniversidad);
-            mapping.map(EstudioDocument::getCc_per, Estudio::setPersona);
-            mapping.map(EstudioDocument::getId_prof, Estudio::setProfesion);
+            mapping.map(EstudioDocument::getCc_per, Estudio::setCc_persona);
+            mapping.map(EstudioDocument::getId_prof, Estudio::setId_profesion);
             mapping.map(EstudioDocument::getFecha, Estudio::setFecha);
         });
     }

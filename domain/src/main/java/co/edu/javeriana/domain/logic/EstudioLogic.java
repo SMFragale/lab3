@@ -11,5 +11,5 @@ public interface EstudioLogic {
 
     List<Estudio> findAll(int persistence);
     Estudio findByIdCc(Integer cc, Integer id,int persistence);
-    Integer count(int persistence);
+    Long count(int persistence);
 }

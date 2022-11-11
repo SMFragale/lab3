@@ -87,7 +87,7 @@ public class PersonaLogicImpl implements PersonaLogic {
     }
 
     @Override
-    public Integer count(int persistence) {
+    public Long count(int persistence) {
         if (persistence == 1){
             return personaPortMaria.count();
         }

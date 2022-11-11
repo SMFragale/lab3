@@ -47,6 +47,7 @@ public class EstudioAdapter implements EstudioPortMongo {
             estudioRepository.save(estudioMapper.fromDomainToDocument(estudio));
         }
         catch (Exception e) {
+            e.printStackTrace();
             return Boolean.FALSE;
         }
         return null;
@@ -66,7 +67,7 @@ public class EstudioAdapter implements EstudioPortMongo {
     }
 
     @Override
-    public Integer count() {
-        return estudioRepository.findAll().size();
+    public Long count() {
+        return estudioRepository.count();
     }
 }

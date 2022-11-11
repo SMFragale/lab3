@@ -11,6 +11,6 @@ public interface PersonaPort {
 
     List<Persona> findAll();
     Persona findByCC(Integer cc);
-    Integer count();
+    Long count();
 
 }

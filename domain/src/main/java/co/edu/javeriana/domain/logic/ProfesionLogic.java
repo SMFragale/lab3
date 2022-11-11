@@ -11,5 +11,5 @@ public interface ProfesionLogic {
 
     List<Profesion> findAll(int persistence);
     Profesion findById(Integer id,int persistence);
-    Integer count(int persistence);
+    Long count(int persistence);
 }

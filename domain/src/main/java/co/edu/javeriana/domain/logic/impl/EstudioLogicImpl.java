@@ -86,7 +86,7 @@ public class EstudioLogicImpl implements EstudioLogic {
     }
 
     @Override
-    public Integer count(int persistence) {
+    public Long count(int persistence) {
         if (persistence == 1){
             return estudioPortMaria.count();
         }

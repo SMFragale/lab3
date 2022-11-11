@@ -72,12 +72,12 @@ public class TelefonoLogicImpl implements TelefonoLogic {
     }
 
     @Override
-    public Telefono findById(Integer cc, int persistence) {
+    public Telefono findByNum(String num, int persistence) {
         if (persistence == 1){
-            return telefonoPortMaria.findById(cc);
+            return telefonoPortMaria.findByNum(num);
         }
         else if (persistence == 2) {
-            return telefonoPortMongo.findById(cc);
+            return telefonoPortMongo.findByNum(num);
         }
         else {
 //            return telefonoPortMaria.findById(cc) && telefonoPortMongo.findById(cc);
@@ -86,7 +86,7 @@ public class TelefonoLogicImpl implements TelefonoLogic {
     }
 
     @Override
-    public Integer count(int persistence) {
+    public Long count(int persistence) {
         if (persistence == 1){
             return telefonoPortMaria.count();
         }

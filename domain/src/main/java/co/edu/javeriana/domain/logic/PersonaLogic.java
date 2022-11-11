@@ -11,5 +11,5 @@ public interface PersonaLogic {
 
     List<Persona> findAll(int persistence);
     Persona findByCC(Integer cc, int persistence);
-    Integer count(int persistence);
+    Long count(int persistence);
 }

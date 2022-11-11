@@ -11,6 +11,6 @@ public interface EstudioPort {
 
     List<Estudio> findAll();
     Estudio findByIdCcAndId(Integer cc, Integer id);
-    Integer count();
+    Long count();
 
 }
