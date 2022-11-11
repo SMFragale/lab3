@@ -8,6 +8,7 @@ import co.edu.javeriana.mongo.repository.EstudioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EstudioAdapter implements EstudioPortMongo {
     @Autowired
@@ -39,21 +40,33 @@ public class EstudioAdapter implements EstudioPortMongo {
 
     @Override
     public Boolean update(Estudio estudio) {
+        try {
+            List<EstudioDocument> estudios = estudioRepository.findByCc_perAndId_prof(estudio.getCc_persona(), estudio.getId_profesion());
+            if(estudios.isEmpty())
+                return Boolean.FALSE;
+            estudioRepository.save(estudioMapper.fromDomainToDocument(estudio));
+        }
+        catch (Exception e) {
+            return Boolean.FALSE;
+        }
         return null;
     }
 
     @Override
     public List<Estudio> findAll() {
-        return null;
+        return estudioRepository.findAll().stream().map(e -> estudioMapper.fromDocumentToDomain(e)).collect(Collectors.toList());
     }
 
     @Override
-    public Estudio findByIdCc(Integer cc, Integer id) {
-        return null;
+    public Estudio findByIdCcAndId(Integer cc, Integer id) {
+        List<EstudioDocument> found = estudioRepository.findByCc_perAndId_prof(cc, id);
+        if(found.isEmpty())
+            return null;
+        return estudioMapper.fromDocumentToDomain(found.get(0));
     }
 
     @Override
     public Integer count() {
-        return null;
+        return estudioRepository.findAll().size();
     }
 }

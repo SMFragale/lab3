@@ -1,7 +1,6 @@
 package co.edu.javeriana.mongo.repository;
 
 import co.edu.javeriana.mongo.document.EstudioDocument;
-import co.edu.javeriana.mongo.document.EstudioPK;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
@@ -9,10 +8,10 @@ import java.util.List;
 
 public interface EstudioRepository extends MongoRepository<EstudioDocument, String> {
 
-    @Query("{univer:?0}")
-    public List<EstudioDocument> findByUniver(String univer);
-
     @Query("{'cc_per':?0, }")
-    public List<EstudioDocument> findByCc_per(int cc_per);
+    List<EstudioDocument> findByCc_per(int cc_per);
+
+    @Query("{cc_per:?0, id_prof: ?1 }")
+    List <EstudioDocument> findByCc_perAndId_prof(int cc_per, int id_prof);
 
 }

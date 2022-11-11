@@ -2,11 +2,8 @@ package co.edu.javeriana.domain.logic.impl;
 
 import co.edu.javeriana.domain.logic.EstudioLogic;
 import co.edu.javeriana.domain.model.Estudio;
-import co.edu.javeriana.domain.model.Persona;
 import co.edu.javeriana.domain.ports.out.maria.EstudioPortMaria;
-import co.edu.javeriana.domain.ports.out.maria.PersonaPortMaria;
 import co.edu.javeriana.domain.ports.out.mongo.EstudioPortMongo;
-import co.edu.javeriana.domain.ports.out.mongo.PersonaPortMongo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -77,10 +74,10 @@ public class EstudioLogicImpl implements EstudioLogic {
     @Override
     public Estudio findByIdCc(Integer cc, Integer id, int persistence) {
         if (persistence == 1){
-            return estudioPortMaria.findByIdCc(cc, id);
+            return estudioPortMaria.findByIdCcAndId(cc, id);
         }
         else if (persistence == 2) {
-            return estudioPortMongo.findByIdCc(cc, id);
+            return estudioPortMongo.findByIdCcAndId(cc, id);
         }
         else {
 //            return estudioPortMaria.findByIdCc(cc, id) && estudioPortMongo.findByIdCc(cc, id);

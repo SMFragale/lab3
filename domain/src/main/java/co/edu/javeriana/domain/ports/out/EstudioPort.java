@@ -10,7 +10,7 @@ public interface EstudioPort {
     Boolean update(Estudio estudio);
 
     List<Estudio> findAll();
-    Estudio findByIdCc(Integer cc, Integer id);
+    Estudio findByIdCcAndId(Integer cc, Integer id);
     Integer count();
 
 }

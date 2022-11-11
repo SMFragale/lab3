@@ -8,6 +8,6 @@ import java.time.LocalDate;
 public class Estudio {
     private LocalDate fecha;
     private String universidad;
-    private String profesion;
-    private String persona;
+    private Integer id_profesion;
+    private Integer cc_persona;
 }
