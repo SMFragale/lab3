@@ -6,7 +6,7 @@ import java.util.List;
 
 @Data
 public class Persona {
-    private int cc;
+    private Integer cc;
     private String nombre;
     private String apellido;
     private Character genero;
