@@ -16,4 +16,6 @@ public interface EstudioRepository extends MongoRepository<EstudioDocument, Stri
     @Query("{cc_per:?0, id_prof: ?1 }")
     List <EstudioDocument> findByCc_perAndId_prof(int cc_per, int id_prof);
 
+
+
 }

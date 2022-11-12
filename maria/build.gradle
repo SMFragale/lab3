@@ -11,10 +11,20 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.0'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.24'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.projectlombok:lombok:1.18.24'
+	implementation 'org.projectlombok:lombok:1.18.22'
 
 	//Dependencias del proyecto spring jpa y mariadb
 	implementation 'org.springframework.data:spring-data-jpa:2.7.5'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.7.5'
 	implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.8'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-maven-plugin', version: '2.7.5'
 
 	//Dependencias internas
 	implementation project(':domain')

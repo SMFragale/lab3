@@ -1,6 +1,7 @@
 package co.edu.javeriana.mongo;
 
 import co.edu.javeriana.domain.model.Estudio;
+import co.edu.javeriana.mongo.document.EstudioDocument;
 import co.edu.javeriana.mongo.mapper.EstudioMapper;
 import co.edu.javeriana.mongo.mapper.EstudioMapperImpl;
 import co.edu.javeriana.mongo.repository.EstudioRepository;
@@ -29,6 +30,11 @@ class MongoApplicationTests {
 		e.setUniversidad("La Sabana");
 		e.setFecha(LocalDate.now());
 		estudioRepository.save(estudioMapper.fromDomainToDocument(e));
+	}
+	@Test
+	void save() {
+		EstudioDocument e = new EstudioDocument(1,1,LocalDate.now(),"Piloto");
+		estudioRepository.save(e);
 	}
 
 	@Test
