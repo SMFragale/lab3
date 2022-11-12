@@ -20,6 +20,7 @@ class MongoApplicationTests {
 
 	EstudioMapper estudioMapper = new EstudioMapperImpl();
 
+
 	@Test
 	void updateEstudio() {
 		Estudio e = new Estudio();

@@ -6,5 +6,5 @@ import lombok.Data;
 public class Telefono {
     private String numero;
     private String operador;
-    private Persona duenio;
+    private Integer duenio;
 }

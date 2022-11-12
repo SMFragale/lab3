@@ -5,12 +5,14 @@ import co.edu.javeriana.domain.model.Estudio;
 import co.edu.javeriana.domain.ports.out.maria.EstudioPortMaria;
 import co.edu.javeriana.domain.ports.out.mongo.EstudioPortMongo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class EstudioLogicImpl implements EstudioLogic {
-    @Autowired
+
     private EstudioPortMaria estudioPortMaria;
 
     @Autowired
