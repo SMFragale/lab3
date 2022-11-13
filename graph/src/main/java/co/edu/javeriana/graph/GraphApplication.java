@@ -3,13 +3,14 @@ package co.edu.javeriana.graph;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Arrays;
 
-@SpringBootApplication(scanBasePackages = { "co.edu.javeriana.domain.logic", "co.edu.javeriana.graph", "co.edu.javeriana.mongo" })
+@SpringBootApplication(scanBasePackages = { "co.edu.javeriana.domain.logic", "co.edu.javeriana.graph", "co.edu.javeriana.mongo", "co.edu.javeriana.maria" }, exclude = {DataSourceAutoConfiguration.class})
 @ComponentScan(basePackages = {"co.edu.javeriana.*"})
 public class GraphApplication {
 

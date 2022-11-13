@@ -14,6 +14,10 @@ public class PersonaController {
     @Autowired
     private PersonaLogic personaLogic;
 
+    public PersonaController(PersonaLogic personaLogic) {
+        this.personaLogic = personaLogic;
+    }
+
     @QueryMapping
     public List<Persona> findAllPersonas(@Argument int persistence) {
         return personaLogic.findAll(persistence);

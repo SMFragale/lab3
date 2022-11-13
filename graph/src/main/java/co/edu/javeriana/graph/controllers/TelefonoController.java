@@ -11,6 +11,10 @@ import java.util.List;
 
 public class TelefonoController {
 
+    public TelefonoController(TelefonoLogic telefonoLogic) {
+        this.telefonoLogic = telefonoLogic;
+    }
+
     @Autowired
     private TelefonoLogic telefonoLogic;
 

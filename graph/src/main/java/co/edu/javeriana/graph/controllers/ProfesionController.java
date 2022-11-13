@@ -11,6 +11,10 @@ import java.util.List;
 
 public class ProfesionController {
 
+    public ProfesionController(ProfesionLogic profesionLogic) {
+        this.profesionLogic = profesionLogic;
+    }
+
     @Autowired
     private ProfesionLogic profesionLogic;
 

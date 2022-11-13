@@ -21,8 +21,9 @@ dependencies {
 	implementation 'org.springframework.graphql:spring-graphql:1.0.2'
 
 
-	implementation project(':domain');
+	implementation project(':domain')
 	implementation project(':mongo')
+	implementation project(':maria')
 }
 
 tasks.named('test') {

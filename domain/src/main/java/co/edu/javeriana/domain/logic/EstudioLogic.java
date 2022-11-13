@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface EstudioLogic {
     Boolean create(Estudio estudio, int persistence);
     Boolean delete(Estudio estudio, int persistence);

@@ -17,6 +17,10 @@ public class EstudioController {
     @Autowired
     private EstudioLogic estudioLogic;
 
+    public EstudioController(EstudioLogic estudioLogic) {
+        this.estudioLogic = estudioLogic;
+    }
+
     @QueryMapping
     public List<Estudio> findAllEstudios(@Argument int persistence) {
         return estudioLogic.findAll(persistence);
