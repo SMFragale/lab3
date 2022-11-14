@@ -37,7 +37,8 @@ public class EstudioController {
     }
 
     @MutationMapping
-    public Boolean createEstudio(@Argument int cc_persona, @Argument int id_profesion, @Argument String fecha, @Argument String universidad, @Argument int persistence) {
+    public Boolean createEstudio(@Argument int cc_persona, @Argument int id_profesion, @Argument String fecha,
+                                 @Argument String universidad, @Argument int persistence) {
         Estudio e = new Estudio();
         e.setFecha(LocalDate.parse(fecha));
         e.setCc_persona(cc_persona);
